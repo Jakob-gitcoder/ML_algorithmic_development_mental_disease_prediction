@@ -22,4 +22,12 @@ Use Project overview figure from report.
 ### Overview of development steps (codefiles)
 Explain the environment the code was build and executed in - Ucloud, computational ressources. 
 Explain what each file do in general and in order.
+
+1: pipeline preproccesing
+2: Scaling
+3: all_tuned_models
+4: stacking_voting
+5: metrics_final_models
+6: shap
+
 Explain what the purpose of each file is. 
