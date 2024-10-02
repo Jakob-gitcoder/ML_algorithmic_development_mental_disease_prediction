@@ -2,6 +2,7 @@
 
 ## About this project
 ### Type of project/purpose of repository
+E.g. Project contributors and credits - Who are main authors and who have contributed to the development.
 E.g. Practical circumstances - security of data - sensitive medical data - Collaboration with OUH.
 E.g. To showcase theoretical and model development skills within ML.
 E.g. Model development.
