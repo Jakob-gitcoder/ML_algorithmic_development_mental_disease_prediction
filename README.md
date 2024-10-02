@@ -7,6 +7,8 @@ E.g. To showcase theoretical and model development skills within ML.
 E.g. Model development.
 ### Background/problem
 Use introduction segment from report.
+Details about the ML-based problem to be solved - Dataset size, missing values, feature space, type of data (medical data, patient reported data, demographic data).
+Highlight problems in relation to the nature of the data.
 ### Project solution
 Use Project overview figure from report.
 
