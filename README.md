@@ -20,5 +20,6 @@ Use Project overview figure from report.
 
 ## Code implementation
 ### Overview of development steps (codefiles)
+Explain the environment the code was build and executed in - Ucloud, computational ressources. 
 Explain what each file do in general and in order.
 Explain what the purpose of each file is. 
