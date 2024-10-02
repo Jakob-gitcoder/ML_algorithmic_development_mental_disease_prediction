@@ -20,3 +20,5 @@ Use Project overview figure from report.
 
 ## Code implementation
 ### Overview of development steps (codefiles)
+Explain what each file do in general and in order.
+Explain what the purpose of each file is. 
