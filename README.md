@@ -1,4 +1,8 @@
 # ML_algorithmic_development_mental_disease_prediction
+## How to run this project / Requirements
+- Write a requirements.txt file
+- Explain how to setup environment to run code
+- Explain how data should be formattted
 
 ## About this project
 ### Type of project/purpose of repository
