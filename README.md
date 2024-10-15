@@ -19,10 +19,6 @@ Important notice: The exact dataset that have been used for this project is not 
 The general dataformat and a visualization of what variables have been used will still be presented to showcase what type of data will work for development of ML-pipelines.
 
 ### Background/problem
-Use introduction segment from report.
-Details about the ML-based problem to be solved - Dataset size, missing values, feature space, type of data (medical data, patient reported data, demographic data).
-Highlight problems in relation to the nature of the data.
-
 With the increasing prevalence of mental illnesses and the increasing pressure of the healthcare system in general, there is a need for more effective procedures and automation. Machine learning can be applied and also act as a decision support tool for practitioners to ease the task of diagnosing patients. The main ideas and takeaways from incorporating machine learning into the health care system are increasing the quality of the health care the patients receive, whilst also decreasing the workload for the clinicians through the analytical predictive power of machine learning. However, the machine learning algorithms utilized will also need to be transparent and explainable for the benefit of both the clinicians and the patients. This highlights the importance of utilizing Expainable AI (XAI) to ensure clinical demands in relation to algorithmic decision making.
 
 Common problems that clinical classification algorithms face in a real-life scenario typically revolves around the datasize and missing values. This was also the case for the type of data used for this project. Therefore the main essentitive of some of the earlier stages is on efficient handling of these issues.
@@ -37,7 +33,7 @@ In relation to the project scope and highlighted problems, the main topics that 
 ### Project solution
 The general overview of the project solution can be seen on the figure below:
 ![Project_overview](./assets/Project_overview.jpg)
-
+The project flow is divided into three stages, Data preparation, Model development and Final model evaluation and XAI. For context, the model development phases is divided into two branches. The branches represent a parallel development of models on two different datasets. This is due to certain circumstances in relation to this specific project and the processes applied are identical for each branch. If you only have one dataset then just apply the steps highlighted for one branch. 
 
 
 ## How to run this project / Requirements
