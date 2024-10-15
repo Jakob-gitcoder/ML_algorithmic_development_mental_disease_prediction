@@ -35,7 +35,9 @@ In relation to the project scope and highlighted problems, the main topics that 
 - Usage of XAI for model transparency.
 
 ### Project solution
-Use Project overview figure from report.
+The general overview of the project solution can be seen on the figure below:
+![Project_overview](./assets/Project_overview.jpg)
+
 
 
 ## How to run this project / Requirements
