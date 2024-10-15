@@ -9,7 +9,7 @@ The purpose of this repository is to showcase the usefullnes of using ML for cla
 The overall emphasis will be to explain the key concepts and thoughts about the algorithmic development through visualization and code in this README-file. 
 
 ### Project contributors and credits
-This project is the outcome of three sequantially carried out master thesis projects from Syddansk Universitet (SDU), that has been developed over a two year period. The project is a part of a larger initiative that has been presented by the ACQUIRE-ICD foundation which is a collaboratory research-based project managed by OUH and SDU, which aims to increase patient related outcomes in relation to heart patients. For more information about this project and its organization see [ACQUIRE-ICD]([https://example.com](https://www.sdu.dk/en/om-sdu/institutter-centre/institut_psykologi/forskning/forskningsprojekter_/acquire-icd)
+This project is the outcome of three sequantially carried out master thesis projects from Syddansk Universitet (SDU), that has been developed over a two year period. The project is a part of a larger initiative that has been presented by the ACQUIRE-ICD foundation which is a collaboratory research-based project managed by OUH and SDU, which aims to increase patient related outcomes in relation to heart patients. For more information about this project and its organization see [ACQUIRE-ICD](https://www.sdu.dk/en/om-sdu/instituttercentre/institut_psykologi/forskning/forskningsprojekter_/acquire-icd)
  
 The main authors of the project is Jakob Eriksen and David Krogh Kølbæk.
 
