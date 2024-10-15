@@ -6,19 +6,22 @@ This project is mainly a Data science project with the overall purpose of develo
 
 The purpose of this repository is to showcase the usefullnes of using ML for classifying mental health issues using patient-reported and demographic data. This project also reflects a special emphasis on solving problems related to real-world data, more precisely, working with smaller datasets with serious problems related to missing values, etc. 
 
-The overall emphasis will be to explain the key concepts and thoughts about the algorithmic development through visualization and code in this README-file. 
+The overall emphasis will be to explain the key concepts and thoughts about the algorithmic development through visualization and code in this README-file.
 
 ### Project contributors and credits
-This project is the outcome of three sequantially carried out master thesis projects from Syddansk Universitet (SDU), that has been developed over a two year period. The project is a part of a larger initiative that has been presented by the ACQUIRE-ICD foundation which is a collaboratory research-based project managed by OUH and SDU, which aims to increase patient related outcomes in relation to heart patients. For more information about this project and its organization see [ACQUIRE-ICD](https://www.sdu.dk/en/om-sdu/instituttercentre/institut_psykologi/forskning/forskningsprojekter_/acquire-icd)
+This project is the outcome of three sequantially carried out master thesis projects from Syddansk Universitet (SDU), that has been developed over a two year period. The project is a part of a larger initiative that has been presented by the ACQUIRE-ICD foundation which is a collaboratory research-based project managed by OUH and SDU, which aims to increase patient related outcomes in relation to heart patients. For more information about this project and its organization see [ACQUIRE-ICD](https://www.sdu.dk/en/om-sdu/instituttercentre/institut_psykologi/forskning/forskningsprojekter_/acquire-icd).
  
-The main authors of the project is Jakob Eriksen and David Krogh Kølbæk.
+The main authors of the final rendition of the project which is presented here are Jakob Eriksen and David Krogh Kølbæk. However this project is greatly influenced by our former supervisors Uffe Will and Ali Ebrahimi, which have provided continuous feedback on key processes related to project management and ML-based development. The earlier iterations of this project has been carried out by Jonas Pedersen and Ebbe Christensen. Also a special thanks is givin to the phycological department of OUH which have provided great feedback on clinical variables through their extensive domain knowledge. 
 
-E.g. Project contributors and credits - Who are main authors and who have contributed to the development.
-E.g. Practical circumstances - security of data - sensitive medical data - Collaboration with OUH.
-E.g. To showcase theoretical and model development skills within ML.
-E.g. Model development.
+### Practical circumstances
+Important notice: The exact dataset that have been used for this project is not sharable since it contains sensisitve patient information and cannot be assessed without special authorization from Odense Universitets Hospital (OUH). If one wishes to work further on this project it is recommended to contact Odense Universitets Hospital and ask for the ACQUIRE-ICD project.
+
+The general dataformat and a visualization of what variables have been used will still be presented to showcase what type of data will work for development of ML-pipelines.
+
 
 ## How to run this project / Requirements
+Important notice: Some of the processes in this project have been catered to a very specific instance of data variables and might not be best practise for data in other formats. Therefore, it is recommended to consider the general outline of the data variables that have been used and take the data-format into context and consideration when creating your own project.
+
 ### Setting Up the Project
 
 1. **Clone the Repository**: Start by cloning the GitHub repository to your local machine:
