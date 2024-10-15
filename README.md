@@ -22,6 +22,25 @@ The general dataformat and a visualization of what variables have been used will
 ## How to run this project / Requirements
 Important notice: Some of the processes in this project have been catered to a very specific instance of data variables and might not be best practise for data in other formats. Therefore, it is recommended to consider the general outline of the data variables that have been used and take the data-format into context and consideration when creating your own project.
 
+### Background/problem
+Use introduction segment from report.
+Details about the ML-based problem to be solved - Dataset size, missing values, feature space, type of data (medical data, patient reported data, demographic data).
+Highlight problems in relation to the nature of the data.
+
+With the increasing prevalence of mental illnesses and the increasing pressure of the healthcare system in general, there is a need for more effective procedures and automation. Machine learning can be applied and also act as a decision support tool for practitioners to ease the task of diagnosing patients. The main ideas and takeaways from incorporating machine learning into the health care system are increasing the quality of the health care the patients receive, whilst also decreasing the workload for the clinicians through the analytical predictive power of machine learning. However, the machine learning algorithms utilized will also need to be transparent and explainable for the benefit of both the clinicians and the patients. This highlights the importance of utilizing Expainable AI (XAI) to ensure clinical demands in relation to algorithmic decision making.
+
+Common problems that clinical classification algorithms face in a real-life scenario typically revolves around the datasize and missing values. This was also the case for the type of data used for this project. Therefore the main essentitive of some of the earlier stages is on efficient handling of these issues.
+
+In relation to the project scope and highlighted problems, the main topics that will be showcased are:
+- Preprocessing and data-preparation strategies.
+- Tuning and selection of ML-models.
+- Construction of Ensemble models in the form of Voting and Stacking classifiers.
+- Model evaluation strategies.
+- Usage of XAI for model transparency.
+
+### Project solution
+Use Project overview figure from report.
+
 ### Setting Up the Project
 
 1. **Clone the Repository**: Start by cloning the GitHub repository to your local machine:
@@ -64,15 +83,11 @@ Important notice: Some of the processes in this project have been catered to a v
 2. **Select the Notebook**: Open the specific notebook(s) you want to explore. Each notebook will contain data preprocessing steps, model training, evaluation, and visualization.
 3. **Run Cells**: Run each cell in the notebook sequentially to reproduce the analysis. Ensure that the data files are in the appropriate locations as mentioned in the notebook. The precise details of the data that have been used will be explained in another segment. Important notice: The exact dataset that have been used for this project is not sharable since it contains sensisitve patient information and cannot be assessed without special authorization from Odense Universitets Hospital (OUH). 
 
-4. **Data format**: The input variables to all the pipelines in this project should be in tabular format, e.g. consists on n-columns representing features with n-rows representing instances. Missing values are acceptable and will be handled by the algorithms. Due to some manual configurations, the dataset must not contain less than 10 features since some of the feature selection processess will become redundant due to limitation of usage and their general purpose will be invalidaded. 
+4. **Data format**: The input variables to all the pipelines in this project should be in tabular format, e.g. consists of n-columns representing features with n-rows representing instances. Missing values are acceptable and will be handled by the algorithms. Due to some manual configurations, the dataset must not contain less than 10 features since some of the feature selection processess will become redundant due to limitation of usage and their general purpose will be invalidaded. 
 
 
-### Background/problem
-Use introduction segment from report.
-Details about the ML-based problem to be solved - Dataset size, missing values, feature space, type of data (medical data, patient reported data, demographic data).
-Highlight problems in relation to the nature of the data.
-### Project solution
-Use Project overview figure from report.
+
+
 
 ## ML-development process
 ### Preprocesssing
