@@ -18,10 +18,6 @@ Important notice: The exact dataset that have been used for this project is not 
 
 The general dataformat and a visualization of what variables have been used will still be presented to showcase what type of data will work for development of ML-pipelines.
 
-
-## How to run this project / Requirements
-Important notice: Some of the processes in this project have been catered to a very specific instance of data variables and might not be best practise for data in other formats. Therefore, it is recommended to consider the general outline of the data variables that have been used and take the data-format into context and consideration when creating your own project.
-
 ### Background/problem
 Use introduction segment from report.
 Details about the ML-based problem to be solved - Dataset size, missing values, feature space, type of data (medical data, patient reported data, demographic data).
@@ -40,6 +36,10 @@ In relation to the project scope and highlighted problems, the main topics that 
 
 ### Project solution
 Use Project overview figure from report.
+
+
+## How to run this project / Requirements
+Important notice: Some of the processes in this project have been catered to a very specific instance of data variables and might not be best practise for data in other formats. Therefore, it is recommended to consider the general outline of the data variables that have been used and take the data-format into context and consideration when creating your own project.
 
 ### Setting Up the Project
 
