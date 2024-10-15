@@ -40,7 +40,7 @@
     This command will open Jupyter in your default web browser. From there, navigate to the notebook files of the project.
     
 2. **Select the Notebook**: Open the specific notebook(s) you want to explore. Each notebook will contain data preprocessing steps, model training, evaluation, and visualization.
-3. **Run Cells**: Run each cell in the notebook sequentially to reproduce the analysis. Ensure that the data files are in the appropriate locations as mentioned in the notebook. If there are specific configurations, they will be mentioned in the comments within the notebook.
+3. **Run Cells**: Run each cell in the notebook sequentially to reproduce the analysis. Ensure that the data files are in the appropriate locations as mentioned in the notebook. The precise details of the data that have been used will be explained in another segment. Important notice: The exact dataset that have been used for this project is not sharable since it contains sensisitve patient information and cannot be assessed without special authorization Odense Universitets Hospital (OUH). 
 
 - Explain how data should be formattted
 
