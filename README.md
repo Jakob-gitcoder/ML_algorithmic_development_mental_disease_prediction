@@ -110,6 +110,7 @@ The general approach to the preprocessing is based on the problems identified fo
 - Severe class imbalance
 
 The specific problems of the dataset can be seen on the following figure:
+![Project_overview](./assets/class_balance_and_missing_values.jpg)
 
 ### Model development
 ### Model evaluation
