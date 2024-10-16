@@ -88,7 +88,29 @@ Important notice: Some of the processes in this project have been catered to a v
 
 
 ## ML-development process
+This segment aims to describe the key concepts behind the choices made in the model development phase and explain the theoretical approach in relation to the code files.
+
+### Dataset information
+The dataset that has been used for this project is as mentioned private data that cannot be accessed without authorization from OUH. However to provide clarity on the key decisions and strategies applied, the general information and structure of the data will be explained in this segment. 
+
+Dataset information:
+- The dataset has 478 samples representing 478 unique heart patients.
+- There are two unique instances of the dataset, one with labels for representing Anxiety, and one with labels representing Distress.
+- The two different instances uses the same input features but is processed individually and in parallel.
+- The class balance is roughly 8-10% positive cases (patients with mental illness) to 90% healthy patients.
+- The dataset contains 39 unique features (mix of patient reported meassures and demographic data).  
+
+
+
 ### Preprocesssing
+The general approach to the preprocessing is based on the problems identified for the particular dataset that has been used. The dataset contains the following problems that needs to be addressed:
+- Missing values
+- Small dataset size
+- High number of features in relation to size
+- Severe class imbalance
+
+The specific problems of the dataset can be seen on the following figure:
+
 ### Model development
 ### Model evaluation
 ### XAI 
