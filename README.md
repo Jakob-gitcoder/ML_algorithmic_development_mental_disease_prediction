@@ -100,7 +100,20 @@ Dataset information:
 - The class balance is roughly 8-10% positive cases (patients with mental illness) to 90% healthy patients.
 - The dataset contains 39 unique features (mix of patient reported meassures and demographic data).  
 
+### ML-models
+The choice of ML-models that have been tested in this project is based on a litterature search which focused on the medical domain in order to choose relevant and robust models. Furthermore, there was emphasis on choosing models that are very different in nature due to the need for creating ensemble models in later stages of the project. It is recommended to select the models based on domain knowledge and to consider the practical purposes behind the real-life circumstances.
 
+With these factors in mind the selected models for this project are:
+- Random Forest Classifier (RF)
+- Support Vector Classifier (SVC)
+- K-nearest Neighbor Classifier (KNN)
+- Multi-layer Perceptron (MLP)
+- Xtreme boosting gradient Classifier (XGBoost)
+- Naive Bayes (NB)
+- Light Gradient Boosting Classifier (LGBM)
+- Decision Tree Classifier (DTC)
+- Logistic Regression Classifier (LGR)
+These models will be refered to as the "candidate models" from here on out.
 
 ### Preprocesssing
 The general approach to the preprocessing is based on the problems identified for the particular dataset that has been used. The dataset contains the following problems that needs to be addressed:
@@ -114,6 +127,12 @@ The specific problems of the dataset can be seen on the following figure:
 
 To address these problems, the following approach is proposed:
 ![Preprocessing_pipeline](./assets/Preprocessing_pipeline.jpg)
+Each of these steps in the preprocessing pipeline has a fairly complex methodological approach behind them and is pieced together to form a robust and iterative approach to finding the most optimal solution. This process will be refered to as "Preprocessing exploration" and contains the whole preprocessing pipeline in relation to each model candidate.
+This process is depicted and summarized on the following figure:
+
+
+
+
 
 ### Model development
 ### Model evaluation
