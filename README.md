@@ -122,14 +122,18 @@ The general approach to the preprocessing is based on the problems identified fo
 - High number of features in relation to size
 - Severe class imbalance
 
+**Dataset characteristics**
 The specific problems of the dataset can be seen on the following figure:
 ![Data_problems](./assets/class_balance_and_missing_values.jpg)
 
+**Singular Preprocessing Pipeline**
 To address these problems, the following approach is proposed:
 ![Preprocessing_pipeline](./assets/Preprocessing_pipeline.jpg)
+
 Each of these steps in the preprocessing pipeline has a fairly complex methodological approach behind them and is pieced together to form a robust and iterative approach to finding the most optimal solution. This process will be refered to as "Preprocessing exploration" and contains the whole preprocessing pipeline in relation to each model candidate.
 This process is depicted and summarized on the following figure:
 ![Preprocessing_exploration](./assets/Preprocessing_exploration.jpg)
+
 The main concept behind the figure is to use the different preprocessing methods in layers. In this project, four different imputing strategies are utilized, 9 different feature subsets based on feature selection processes and 4 balancing methods. The question is now, how do we know which combination of methods will yield the best results? And how do we take interactive effects between different preprocessing steps into account? The solution in this project is to brute-force all possible combinations of the best identified methods which was found during literature search. The figure above, takes two datasets into account as mentioned earlier. However if we follow one branch we can see that we get 144 unique pipelines when we end out in the Balancing methods bracket. This is only for one model and this process must be repeated for all candidate models that are selected. An important notice is to apply imputation, then feature selection and in the end balancing. This is to avoid data-leakage in some of the methods used during the pipelines. 
 
 Both the imputation and balancing bracket (green and red box on above image) consists of singular methods that is tried once for each pipeline iteration. However the Feature selection bracket (blue box), is visualy more simplified and is in reality an example of different feature selection methods that dynamically select the feature subset from a set of 9 for each pipeline iteration. To provide further clarity on the functionality, the following figure is provided:
