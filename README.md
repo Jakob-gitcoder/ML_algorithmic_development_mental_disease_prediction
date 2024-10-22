@@ -131,12 +131,12 @@ The general approach to the preprocessing is based on the problems identified fo
 **Dataset characteristics**
 
 The specific problems of the dataset can be seen on the following figure:
-<img src="./assets/class_balance_and_missing_values.jpg" alt="Test Image" width="500"/>
+<img src="./assets/class_balance_and_missing_values.jpg" alt="Test Image" width="600"/>
 
 **Singular Preprocessing Pipeline**
 
 To address these problems, the following approach is proposed:
-<img src="./assets/Preprocessing_pipeline.jpg" alt="Test Image" width="550"/>
+<img src="./assets/Preprocessing_pipeline.jpg" alt="Test Image" width="600"/>
 
 Each of these steps in the preprocessing pipeline has a fairly complex methodological approach behind them and is pieced together to form a robust and iterative approach to finding the most optimal solution. This process will be refered to as "Preprocessing exploration" and contains the whole preprocessing pipeline in relation to each model candidate.
 This process is depicted and summarized on the following figure in the next segment:
