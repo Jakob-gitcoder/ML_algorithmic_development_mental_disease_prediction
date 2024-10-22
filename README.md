@@ -115,6 +115,11 @@ With these factors in mind the selected models for this project are:
 - Logistic Regression Classifier (LGR)
 These models will be refered to as the "candidate models" from here on out.
 
+### Evaluation strategy
+It is important to know why and how evaluation metrics are used for your project. In this case the choice of metrics is dependent on the demands to ML-models in clinical context. In this project we want a model that performs great on both the positive and negative class. Putting it into context if we develop a model that produce false positives, patients would experience alot of inconvenience, whereas if the model produced alot of false negatives, it would miss patients and the consequences could be dire. This is essentially a question of priortities and it is often not possible to achieve the ideal model that is very sensitive without making false positives. However, since our aims is to produce a balanced model we will use the F1-macro score that weights both precision and recall but also emphasized the negative and positive class. This is especially important when the dataset is very imbalanced, since the model performance could look optimistically good for the negative class due to its sheer size compared to positive class. Another thing to avoid is creating a model that only performs good at the positive class. Furthermore since the dataset that is used in this project is very small, it is needed to perform cross validation to ensure robustness and generalizabilty in the model development phases. This is in other words to avoid overfitting the models. 
+
+A summary of the demands to the algorithms and the solution in terms of evaluation metrics can be seen on the figure below:
+
 ### Preprocesssing
 The general approach to the preprocessing is based on the problems identified for the particular dataset that has been used. The dataset contains the following problems that needs to be addressed:
 - Missing values
