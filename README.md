@@ -32,7 +32,7 @@ In relation to the project scope and highlighted problems, the main topics that 
 
 ### Project solution
 The general overview of the project solution can be seen on the figure below:
-![Project_overview](./assets/Project_overview.jpg)
+<img src="./assets/Project_overview.jpg" alt="Test Image" width="800"/>
 The project flow is divided into three stages, Data preparation, Model development and Final model evaluation and XAI. For context, the model development phase is divided into two branches. The branches represent a parallel development of models on two different datasets. This is due to certain circumstances in relation to this specific project and the processes applied are identical for each branch. If you only have one dataset then just apply the steps highlighted for one branch. 
 
 
@@ -119,7 +119,7 @@ These models will be refered to as the "candidate models" from here on out.
 It is important to know why and how evaluation metrics are used for your project. In this case the choice of metrics is dependent on the demands to ML-models in clinical context. In this project we want a model that performs great on both the positive and negative class. Putting it into context if we develop a model that produce false positives, patients would experience alot of inconvenience, whereas if the model produced alot of false negatives, it would miss patients and the consequences could be dire. This is essentially a question of priortities and it is often not possible to achieve the ideal model that is very sensitive without making false positives. However, since our aims is to produce a balanced model we will use the F1-macro score that weights both precision and recall but also emphasized the negative and positive class. This is especially important when the dataset is very imbalanced, since the model performance could look optimistically good for the negative class due to its sheer size compared to positive class. Another thing to avoid is creating a model that only performs good at the positive class. Furthermore since the dataset that is used in this project is very small, it is needed to perform cross validation to ensure robustness and generalizabilty in the model development phases. This is in other words to avoid overfitting the models. 
 
 A summary of the demands to the algorithms and the solution in terms of evaluation metrics can be seen on the figure below:
-![Demands_vs_metrics](./assets/Demands_vs_metrics.jpg)
+<img src="./assets/Demands_vs_metrics.jpg" alt="Test Image" width="400"/>
 
 ### Preprocesssing
 The general approach to the preprocessing is based on the problems identified for the particular dataset that has been used. The dataset contains the following problems that needs to be addressed:
@@ -131,12 +131,12 @@ The general approach to the preprocessing is based on the problems identified fo
 **Dataset characteristics**
 
 The specific problems of the dataset can be seen on the following figure:
-![Data_problems](./assets/class_balance_and_missing_values.jpg)
+<img src="./assets/class_balance_and_missing_values.jpg" alt="Test Image" width="400"/>
 
 **Singular Preprocessing Pipeline**
 
 To address these problems, the following approach is proposed:
-![Preprocessing_pipeline](./assets/Preprocessing_pipeline.jpg)
+<img src="./assets/Preprocessing_pipeline.jpg" alt="Test Image" width="400"/>
 
 Each of these steps in the preprocessing pipeline has a fairly complex methodological approach behind them and is pieced together to form a robust and iterative approach to finding the most optimal solution. This process will be refered to as "Preprocessing exploration" and contains the whole preprocessing pipeline in relation to each model candidate.
 This process is depicted and summarized on the following figure in the next segment:
@@ -152,9 +152,7 @@ The main concept behind the figure is to use the different preprocessing methods
 Both the imputation and balancing bracket (green and red box on above image) consists of singular methods that is tried once for each pipeline iteration. However the Feature selection bracket (blue box), is visualy more simplified and is in reality an example of different feature selection methods that dynamically select the feature subset from a set of 9 for each pipeline iteration. The process of finding the most optimal features can be very challenging and be very dependent on the dataset characteristics and models chosen. To compensate for interactive effects between features and other preprocessing methods this step is included in the preprocessing pipeline.
 
 To provide further clarity on the functionality, the following figure is provided:
-![Feature Selection Ensemble](./assets/Feature_selection_ensemble.jpg)
-
-<img src="./assets/Feature_selection_ensemble.jpg" alt="Test Image" width="500"/>
+<img src="./assets/Feature_selection_ensemble.jpg" alt="Test Image" width="600"/>
 
 
 On the figure it can be seen that the feature selection ensemble contains different methods to find the most optimal features. Filter, wrapper and embedded methods are utilized. The filter methods aims to find the best features by utilizing different statistical aspects like Fischer score, Mutual information and Chi-square. The wrapper method consists of a Forwards greedy search algorithm and the embedded method is the well-known RFECV which is implemented by sci-kit learn. In general the feature selection algorithms perform the feature selection on principles such as between/within class-variance, observed and expected frequency, information gain and dependency between variables and feature importances. This ensures that different aspects of the dataset is taken into account when selecting the features and thus ensuring a more robust selection process. The second level consists of a homogeneous aggregated ensemble which computes the union and intersection of the output features from the three filter methods from the first layer. Furthermore, in the second layer there is a heterogeneous aggregated ensemble which accepts the output from the homogeneous aggregated
