@@ -214,6 +214,9 @@ During most of the Model development phase, we have used the F1-macro score sinc
 Here we can see that the recall, precision, f1, ROC-AUC, PRC-AUC and accuracy metric has been used. An important thing to notice is that the Recall, Precision and F1 metric has individual scores calculated for both the negative and postive class. This gives better insight into the class wise performance. While using the macro score as a default makes it easier to consider the performance for both classes, it is still a bit cryptic to decipher. You can ask yourself this question: "Is my F1-macro score high because my model excels at the positive or negative class?". This question can't be answered without looking at class-wise performance. Furthermore, since the results are based on a 5-fold stratified cross validation, then it is also possible to calculate the standard deviation for each metric. This is very important for assessing whether the models are robust between each of the folds or if the performance varies greatly. This can give you some indication of whether these models would generalize well to unseen data. 
 
 ### XAI 
+Explainable AI is utilized in this project for the purpose of making the ML-algorithms decision process more tranparent 
+
+
 
 ## Code implementation
 ### Overview of development steps (codefiles)
