@@ -138,8 +138,37 @@ The specific problems of the dataset can be seen on the following figure:
 To address these problems, the following approach is proposed:
 <img src="./assets/Preprocessing_pipeline.jpg" alt="Test Image" width="600"/>
 
-Each of these steps in the preprocessing pipeline has a fairly complex methodological approach behind them and is pieced together to form a robust and iterative approach to finding the most optimal solution. This process will be refered to as "Preprocessing exploration" and contains the whole preprocessing pipeline in relation to each model candidate.
-This process is depicted and summarized on the following figure in the next segment:
+Each of these steps in the preprocessing pipeline has a fairly complex methodological approach behind them and is pieced together to form a robust and iterative approach to finding the most optimal solution. This process will be refered to as "Preprocessing exploration" and contains the whole preprocessing pipeline in relation to each model candidate. This process is depicted and summarized on the following figure in the next segment.
+
+Now the selected methods for preprocessing all share the same pattern and thought process. We introduce both simple and complex algorithms/methods to ensure that we try out both simple and complex solutions. This is important because it can be very hard to determine the difficulty level of the classification task. One could ask themselves: What level of complexity do my methods and models need to achieve the best solution? This is ofcourse very cryptic and is often not known before hand. Anyways, the exact methods used is listed here:
+
+Imputation:
+- Simple Imputer
+- KNN Imputer
+- Iterative Imputer
+- Iterative Imputer with RandomForest as regressor
+
+Scaling:
+- Standard Scaler
+- MinMax Scaler
+- Robust Scaler
+- Quantile Transformer
+
+Feature Selection:
+- Fischer Score
+- Mutual Information
+- Chi-squared
+- Forward Greedy Search
+- Recursive Feature Elimination
+- Union Method
+- Intersection Method
+
+Balancing/samplers:
+- Random Undersampler
+- Random Oversampler
+- SMOTEEEN
+- SMOTETomek
+
 
 **Preprocessing Pipelines Ensemble**
 
