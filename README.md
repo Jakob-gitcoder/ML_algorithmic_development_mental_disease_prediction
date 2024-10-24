@@ -207,7 +207,10 @@ Now in order to document the development process for the Stacking and Voting cla
 
 The main concept behind the Stacking classifier development can be seen on the figure above. We have a column representing model combinations and for here we iteratively try out base-learner combinations that gets increasingly more and more complex. Now we have a range of simple to fairly complex model combinations. This is done for three different meta-learners which are the RF, LGR and SVM-metalearners. The Voting classifier is a bit more simple and here we adjust weights that are assigned to each of the models in the voting-ensemble. 
 
-### Model evaluation
+### Final Model evaluation
+During most of the Model development phase, we have used the F1-macro score since it captured all the demands for the algorithms and made it easier to automate the endless iterations in the preprocessing and tuning phases. However, to document the last and best performaing models, several other metrics is needed to provide a clearer image of the Ml-models peroformances. To highlight and explain the approach to this I will now present a table with the evaluation metrics used in this project:
+
+
 ### XAI 
 
 ## Code implementation
