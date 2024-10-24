@@ -84,11 +84,11 @@ Important notice: Some of the processes in this project have been catered to a v
 4. **Data format**: The input variables to all the pipelines in this project should be in tabular format, e.g. consists of n-columns representing features with n-rows representing instances. Missing values are acceptable and will be handled by the algorithms. Due to some manual configurations, the dataset must not contain less than 10 features since some of the feature selection processess will become redundant due to limitation of usage and their general purpose will be invalidaded. 
 
 
-
-
-
 ## ML-development process
 This segment aims to describe the key concepts behind the choices made in the model development phase and explain the theoretical approach in relation to the code files. The overall Model development  process is summarized on the following figure:
+<img src="./assets/Model_development.jpg" alt="Test Image" width="600"/>
+
+The first part of the figure higlights the usage of Domain knowledge from the clinicians from OUH, Data eksploration done by statistically means and then a litterature search. This is used to define the type of ML-models to use and construct meaningful preprocessing pipelines. In other words, when starting your own project it is very important to gather all the essential knowledge before working on the actual solution. The step "Selection of best preprocessing pipeline" is essentially: For each candidate model, the best combination of preprocessing methods (Imputation, Scaling, Feature selection, balancing), will be used in the later processes. Now the main idea is to use this pipeline on the rest of the candidate models and then select the top 5 models performing models. The insentive behind doing this is that the preprocessing pipeline have to be the same when using multiple models in a Voting/stacking classifier which is one of the later steps that can be seen on figure. Now before the stacking and voting classifier is developed, the top 5 models from the preprocessing step are hyperparameter tuned. Now the selection of the best models will be between the ensemble models (stacking/voting) and the individual models. The overall best model will be passed on to the last phase of the Model-development phase which is the final model evaluation. 
 
 ### Dataset information
 The dataset that has been used for this project is as mentioned private data that cannot be accessed without authorization from OUH. However to provide clarity on the key decisions and strategies applied, the general information and structure of the data will be explained in this segment. 
