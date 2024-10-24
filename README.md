@@ -172,6 +172,7 @@ Balancing/samplers:
 
 **Preprocessing Pipelines Ensemble**
 
+The following figure depicts exactly "How" the listed preprocessing methods from the earlier segment is used in conjunction to form a comprehensive and exhuastive search. The figure of this exact process can be seen below: 
 ![Preprocessing_exploration](./assets/Preprocessing_exploration.jpg)
 
 The main concept behind the figure is to use the different preprocessing methods in layers. In this project, four different imputing strategies are utilized, 9 different feature subsets based on feature selection processes and 4 balancing methods. The question is now, how do we know which combination of methods will yield the best results? And how do we take interactive effects between different preprocessing steps into account? The solution in this project is to brute-force all possible combinations of the best identified methods which was found during literature search. The figure above, takes two datasets into account as mentioned earlier. However if we follow one branch we can see that we get 144 unique pipelines when we end out in the Balancing methods bracket. This is only for one model and this process must be repeated for all candidate models that are selected. An important notice is to apply imputation, then feature selection and in the end balancing. This is to avoid data-leakage in some of the methods used during the pipelines. 
