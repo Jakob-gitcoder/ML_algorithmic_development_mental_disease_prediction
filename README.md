@@ -161,7 +161,7 @@ layer, the wrapper methods (Forward Greedy Search) and the embedded method (RFEC
 Hyperparemeter tuning is a highly iterative and time-consuming task. In this project the main focus was to try out different approaches to this task. The best hyper-parameters is very dependent on the models that are used and the most optimal solution might differ greatly between datasets. Therefore this process is often not documented clearly in other type of litterature but I will showcase our main approach to solve this task.
 
 The following figure depicts the overall hyperparameter tuning process used in this project:
-
+<img src="./assets/Hyper_parameter_tuning.jpg" alt="Test Image" width="600"/>
 
 ### Model evaluation
 ### XAI 
