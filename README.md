@@ -209,7 +209,7 @@ The main concept behind the Stacking classifier development can be seen on the f
 
 ### Final Model evaluation
 During most of the Model development phase, we have used the F1-macro score since it captured all the demands for the algorithms and made it easier to automate the endless iterations in the preprocessing and tuning phases. However, to document the last and best performaing models, several other metrics is needed to provide a clearer image of the Ml-models peroformances. To highlight and explain the approach to this I will now present a table with the evaluation metrics used in this project:
-
+<img src="./assets/Final_model_evaluation_example.jpg" alt="Test Image" width="600"/>
 
 ### XAI 
 
