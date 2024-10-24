@@ -32,7 +32,7 @@ In relation to the project scope and highlighted problems, the main topics that 
 
 ### Project solution
 The general overview of the project solution can be seen on the figure below:
-<img src="./assets/Project_overview.jpg" alt="Test Image" width="1000"/>
+<img src="./assets/Project_overview.jpg" alt="Test Image" width="800"/>
 The project flow is divided into three stages, Data preparation, Model development and Final model evaluation and XAI. For context, the model development phase is divided into two branches. The branches represent a parallel development of models on two different datasets. This is due to certain circumstances in relation to this specific project and the processes applied are identical for each branch. If you only have one dataset then just apply the steps highlighted for one branch. 
 
 
