@@ -154,11 +154,15 @@ Both the imputation and balancing bracket (green and red box on above image) con
 To provide further clarity on the functionality, the following figure is provided:
 <img src="./assets/Feature_selection_ensemble.jpg" alt="Test Image" width="600"/>
 
-
 On the figure it can be seen that the feature selection ensemble contains different methods to find the most optimal features. Filter, wrapper and embedded methods are utilized. The filter methods aims to find the best features by utilizing different statistical aspects like Fischer score, Mutual information and Chi-square. The wrapper method consists of a Forwards greedy search algorithm and the embedded method is the well-known RFECV which is implemented by sci-kit learn. In general the feature selection algorithms perform the feature selection on principles such as between/within class-variance, observed and expected frequency, information gain and dependency between variables and feature importances. This ensures that different aspects of the dataset is taken into account when selecting the features and thus ensuring a more robust selection process. The second level consists of a homogeneous aggregated ensemble which computes the union and intersection of the output features from the three filter methods from the first layer. Furthermore, in the second layer there is a heterogeneous aggregated ensemble which accepts the output from the homogeneous aggregated
 layer, the wrapper methods (Forward Greedy Search) and the embedded method (RFECV). This layer also produces an union and intersection of the features found from the different layer and FS methods. The main idea behind using the intersection and union between the different feature selection methods is to combine the strengths of multiple techniques while reducing the risks of individual biases.
 
-### Model development
+### Hyperparamterer tuning
+Hyperparemeter tuning is a highly iterative and time-consuming task. In this project the main focus was to try out different approaches to this task. The best hyper-parameters is very dependent on the models that are used and the most optimal solution might differ greatly between datasets. Therefore this process is often not documented clearly in other type of litterature but I will showcase our main approach to solve this task.
+
+The following figure depicts the overall hyperparameter tuning process used in this project:
+
+
 ### Model evaluation
 ### XAI 
 
