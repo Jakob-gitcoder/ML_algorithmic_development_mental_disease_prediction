@@ -201,7 +201,9 @@ THe main concept of using stacking/voting classifiers is to make more robust and
 The Voting classifier is a more simpel alternative to the stacking classifier. It uses multiple models aswell but it doesn't train a meta-learner. It works by looking at each prediction of the base-learners and then it either does a Hard or Soft-voting. Anyways, this method is used to test whether a more simple ensemble method might produce better results. (this is still in relation to the need to discover the complexity of the classification task). 
 
 Now in order to document the development process for the Stacking and Voting classifier I will present a table of the results used in this project:
-<img src="./assets/Hyper_parameter_tuning.jpg" alt="Test Image" width="400"/>
+<img src="./assets/Stacking_voting_classifiers.jpg" alt="Test Image" width="400"/>
+
+The main concept behind the Stacking classifier development can be seen on the figure above. We have a column representing model combinations and for here we iteratively try out base-learner combinations that gets increasingly more and more complex. Now we have a range of simple to fairly complex model combinations. This is done for three different meta-learners which are the RF, LGR and SVM-metalearners. The Voting classifier is a bit more simple and here we adjust weights that are assigned to each of the models in the voting-ensemble. 
 
 ### Model evaluation
 ### XAI 
