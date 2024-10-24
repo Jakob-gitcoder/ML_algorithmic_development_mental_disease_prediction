@@ -88,7 +88,7 @@ Important notice: Some of the processes in this project have been catered to a v
 
 
 ## ML-development process
-This segment aims to describe the key concepts behind the choices made in the model development phase and explain the theoretical approach in relation to the code files.
+This segment aims to describe the key concepts behind the choices made in the model development phase and explain the theoretical approach in relation to the code files. The overall Model development  process is summarized on the following figure:
 
 ### Dataset information
 The dataset that has been used for this project is as mentioned private data that cannot be accessed without authorization from OUH. However to provide clarity on the key decisions and strategies applied, the general information and structure of the data will be explained in this segment. 
@@ -158,10 +158,13 @@ On the figure it can be seen that the feature selection ensemble contains differ
 layer, the wrapper methods (Forward Greedy Search) and the embedded method (RFECV). This layer also produces an union and intersection of the features found from the different layer and FS methods. The main idea behind using the intersection and union between the different feature selection methods is to combine the strengths of multiple techniques while reducing the risks of individual biases.
 
 ### Hyperparamterer tuning
-Hyperparemeter tuning is a highly iterative and time-consuming task. In this project the main focus was to try out different approaches to this task. The best hyper-parameters is very dependent on the models that are used and the most optimal solution might differ greatly between datasets. Therefore this process is often not documented clearly in other type of litterature but I will showcase our main approach to solve this task.
+Hyperparemeter tuning is a highly iterative and time-consuming task. In this project the main focus was to try out different approaches to cross-validate and experiment with whether the most optimal solution was found. The best hyper-parameters is very dependent on the models that are used and the most optimal solution might differ greatly between datasets. Therefore this process is often not documented clearly in most litterature but I will showcase our main approach to solve this task. Based on the results that was found in the preprocessing step, only 5 of the models is used in the hyperparameter tuning step. In general the idea is to remove models that perform drastically worse since even hyperparameter tuning can't make them better than the already best performing default models. This is also to cut down on the computational cost of running these algorithms.
 
 The following figure depicts the overall hyperparameter tuning process used in this project:
-<img src="./assets/Hyper_parameter_tuning.jpg" alt="Test Image" width="600"/>
+<img src="./assets/Hyper_parameter_tuning.jpg" alt="Test Image" width="400"/>
+
+As seen on the figure, three different methods have been used, RandomSearchCV, GridSearchCV and Bayesian optimization. These hypertuning methods have very different purposes and as such different strengths and weaknesess. In this case the RandomSearch which is less time consuming than the brute-force method Gridsearch is actually used beforehand to gain some intuition about what parameters that might work. These findings is then used to scope out the parameter ranges for the Gridsearch algorithm which will exhaustively try out every combination in the parameter ranges. The second branch on the image is the bayesian optimization method. The general idea about adding this is to have a more sophisticated/intelligent methold that converges towards the most optimal solution by using previous iterations. In the end the results found from this branch will be compared to the first branch. Each of the 5 selected candidates models, selected from the preprocessing stage, will be hyperparameter-tuned by the process depicted on the figure above.
+
 
 ### Model evaluation
 ### XAI 
