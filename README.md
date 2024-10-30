@@ -164,7 +164,10 @@ It is important to know why and how evaluation metrics are used for your project
 
 A summary of the demands to the algorithms and the solution in terms of evaluation metrics can be seen on the figure below:
 
-<img src="./assets/Demands_vs_metrics.jpg" alt="Test Image" width="500"/>
+<p align="center">
+  <img src="./assets/Demands_vs_metrics.jpg" alt="Test Image" width="500"/>
+</p>
+
 
 ---
 
