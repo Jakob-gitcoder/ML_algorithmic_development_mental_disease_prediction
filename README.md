@@ -230,6 +230,12 @@ One of the methods used for global SHAP in this project is the **Beeswarm plot**
 
 This plot enables the user to the see the each feature (y-axis) and its corresponding feature values (color coded from red to blue) in relation to the SHAP values (x-axis). Each unique sample is displayed along the x-axis and if more samples have the same SHAP-value then they will vertically stack and the distribution can be seen as a cluster. Now it is possible to get an overview of whether high feature values of a certain feature correspond to a certain SHAP-value. If we use the MSC_t6 feature as an example we can see we have a red cluster on the left side of the vertical bar (representing 0 SHAP-value). We can now deduct that high feature values (red color) generally corresponds to a negative contribution in the classification process. In other words if this feature has high values it will push the prediction towards class 0 (negative class). This can also be used to look for outliers, e.g are there any samples with very low feature values (blue color), that is placed around the red cluster or just on the left hand side of the vertical bar? Also this figure shows that the MSC_t6 feature is the most contributing feature and the high feature values are decently seperated from the low feature values in relation to the SHAP-values.  
 
+**Local Shap / Force Plots**
+
+Local Shap provides insight into a single prediction. The general usecase in which you would utilize this approach is when you want to check for misclassified samples from your algorithm. By analysing single predictions you can answer the questions like: "What happens when my algorithm produces false negatives and positives?". Also this can be used for single true positives and true negatives. If we use this concept in a more practical manner we are able to provide explanations on a feature level when we are using the algorithm to predict a certain sample. In this projects context we are able to give the clinician information about which features pushed the prediction towards the outcome for a single patient. Now it is possible to give a more detailed insight besides just the predictive outcome. One of the key methods that Shap provides are the plots called Forceplots and an example is provided below:
+<img src="./assets/Force_plot.jpg" alt="Test Image" width="600"/>
+
+
 
 
 ## Code implementation
