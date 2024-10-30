@@ -203,19 +203,19 @@ Each of these steps in the preprocessing pipeline has a fairly complex methodolo
 
 Now the selected methods for preprocessing all share the same pattern and thought process. We introduce both simple and complex algorithms/methods to ensure that we try out both simple and complex solutions. This is important because it can be very hard to determine the difficulty level of the classification task. One could ask themselves: What level of complexity do my methods and models need to achieve the best solution? This is ofcourse very cryptic and is often not known before hand. Anyways, the exact methods used is listed here:
 
-Imputation:
+**Imputation**:
 - Simple Imputer
 - KNN Imputer
 - Iterative Imputer
 - Iterative Imputer with RandomForest as regressor
 
-Scaling:
+**Scaling**:
 - Standard Scaler
 - MinMax Scaler
 - Robust Scaler
 - Quantile Transformer
 
-Feature Selection:
+**Feature Selection**:
 - Fischer Score
 - Mutual Information
 - Chi-squared
@@ -224,7 +224,7 @@ Feature Selection:
 - Union Method
 - Intersection Method
 
-Balancing/samplers:
+**Balancing/samplers**:
 - Random Undersampler
 - Random Oversampler
 - SMOTEEEN
