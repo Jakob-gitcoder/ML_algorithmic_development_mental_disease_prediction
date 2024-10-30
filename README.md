@@ -233,7 +233,7 @@ This plot enables the user to the see the each feature (y-axis) and its correspo
 **Local Shap / Force Plots**
 
 Local Shap provides insight into a single prediction. The general usecase in which you would utilize this approach is when you want to check for misclassified samples from your algorithm. By analysing single predictions you can answer the questions like: "What happens when my algorithm produces false negatives and positives?". Also this can be used for single true positives and true negatives. If we use this concept in a more practical manner we are able to provide explanations on a feature level when we are using the algorithm to predict a certain sample. In this projects context we are able to give the clinician information about which features pushed the prediction towards the outcome for a single patient. Now it is possible to give a more detailed insight besides just the predictive outcome. One of the key methods that Shap provides are the plots called Forceplots and an example is provided below:
-<img src="./assets/Force_plot.jpg" alt="Test Image" width="600"/>
+<img src="./assets/Force_plot.jpg" alt="Test Image" width="800"/>
 
 
 
