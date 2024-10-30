@@ -20,6 +20,9 @@
    - [Final Model evaluation](#Final-Model-evaluation)
    - [XAI](#XAI)
 5. [Code implementation](#Code-implementation)
+   - [Important!](#Important!)
+   - [Overview of development steps (codefiles)](#Overview-of-development-steps-(codefiles))
+6. [Conclusion](#Conclusion)
 
 ---
 
@@ -349,7 +352,7 @@ The code files should be processed and interpreted in the following order (also 
 
 ---
 
-### Conclusion
+## Conclusion
 Summing up: This repository provides a comprehensive approach to the detection of anxiety and distress in ICD patients, integrating theoretical principles with practical implementation. Each segment aims to clarify the underlying concepts, model selection, and pipeline design to ensure transparency and reproducibility.
 
 Thank you for exploring this project! Your interest and time are greatly appreciated. If you have any questions, feedback, or suggestions, please feel free to reach out. I’m always happy to discuss and collaborate.
