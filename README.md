@@ -63,7 +63,9 @@ In relation to the project scope and highlighted problems, the main topics that 
 ### Project solution
 The general overview of the project solution can be seen on the figure below:
 
-<img src="./assets/Project_overview.jpg" alt="Test Image" width="700"/>
+<p align="center">
+  <img src="./assets/Project_overview.jpg" alt="Project Overview" width="700"/>
+</p>
 
 The project flow is divided into three stages, Data preparation, Model development and Final model evaluation and XAI. For context, the model development phase is divided into two branches. The branches represent a parallel development of models on two different datasets. This is due to certain circumstances in relation to this specific project and the processes applied are identical for each branch. If you only have one dataset then just apply the steps highlighted for one branch. 
 
@@ -124,7 +126,9 @@ Important notice: Some of the processes in this project have been catered to a v
 ## ML-development process
 This segment aims to describe the key concepts behind the choices made in the model development phase and explain the theoretical approach in relation to the code files. The overall Model development  process is summarized on the following figure:
 
-<img src="./assets/Model_development.jpg" alt="Test Image" width="600"/>
+<p align="center">
+  <img src="./assets/Model_development.jpg" alt="Model Development" width="600"/>
+</p>
 
 The first part of the figure higlights the usage of Domain knowledge from the clinicians from OUH, Data eksploration done by statistically means and then a litterature search. This is used to define the type of ML-models to use and construct meaningful preprocessing pipelines. In other words, when starting your own project it is very important to gather all the essential knowledge before working on the actual solution. The step "Selection of best preprocessing pipeline" is essentially: For each candidate model, the best combination of preprocessing methods (Imputation, Scaling, Feature selection, balancing), will be used in the later processes. Now the main idea is to use this pipeline on the rest of the candidate models and then select the top 5 models performing models. The insentive behind doing this is that the preprocessing pipeline have to be the same when using multiple models in a Voting/stacking classifier which is one of the later steps that can be seen on figure. Now before the stacking and voting classifier is developed, the top 5 models from the preprocessing step are hyperparameter tuned. Now the selection of the best models will be between the ensemble models (stacking/voting) and the individual models. The overall best model will be passed on to the last phase of the Model-development phase which is the final model evaluation. 
 
@@ -182,13 +186,17 @@ The general approach to the preprocessing is based on the problems identified fo
 
 The specific problems of the dataset can be seen on the following figure:
 
-<img src="./assets/class_balance_and_missing_values.jpg" alt="Test Image" width="600"/>
+<p align="center">
+  <img src="./assets/class_balance_and_missing_values.jpg" alt="Class Balance and Missing Values" width="600"/>
+</p>
 
 **Singular Preprocessing Pipeline**
 
 To address these problems, the following approach is proposed:
 
-<img src="./assets/Preprocessing_pipeline.jpg" alt="Test Image" width="600"/>
+<p align="center">
+  <img src="./assets/Preprocessing_pipeline.jpg" alt="Preprocessing Pipeline" width="600"/>
+</p>
 
 Each of these steps in the preprocessing pipeline has a fairly complex methodological approach behind them and is pieced together to form a robust and iterative approach to finding the most optimal solution. This process will be refered to as "Preprocessing exploration" and contains the whole preprocessing pipeline in relation to each model candidate. This process is depicted and summarized on the following figure in the next segment.
 
@@ -226,7 +234,9 @@ Balancing/samplers:
 
 The following figure depicts exactly "How" the listed preprocessing methods from the earlier segment is used in conjunction to form a comprehensive and exhuastive search. The figure of this exact process can be seen below:
 
-![Preprocessing_exploration](./assets/Preprocessing_exploration.jpg)
+<p align="center">
+  <img src="./assets/Preprocessing_exploration.jpg" alt="Preprocessing Exploration"/>
+</p>
 
 The main concept behind the figure is to use the different preprocessing methods in layers. In this project, four different imputing strategies are utilized, 9 different feature subsets based on feature selection processes and 4 balancing methods. The question is now, how do we know which combination of methods will yield the best results? And how do we take interactive effects between different preprocessing steps into account? The solution in this project is to brute-force all possible combinations of the best identified methods which was found during literature search. The figure above, takes two datasets into account as mentioned earlier. However if we follow one branch we can see that we get 144 unique pipelines when we end out in the Balancing methods bracket. This is only for one model and this process must be repeated for all candidate models that are selected. An important notice is to apply imputation, then feature selection and in the end balancing. This is to avoid data-leakage in some of the methods used during the pipelines. 
 
@@ -236,7 +246,9 @@ Both the imputation and balancing bracket (green and red box on above image) con
 
 To provide further clarity on the functionality, the following figure is provided:
 
-<img src="./assets/Feature_selection_ensemble.jpg" alt="Test Image" width="600"/>
+<p align="center">
+  <img src="./assets/Feature_selection_ensemble.jpg" alt="Feature Selection Ensemble" width="600"/>
+</p>
 
 On the figure it can be seen that the feature selection ensemble contains different methods to find the most optimal features. Filter, wrapper and embedded methods are utilized. The filter methods aims to find the best features by utilizing different statistical aspects like Fischer score, Mutual information and Chi-square. The wrapper method consists of a Forwards greedy search algorithm and the embedded method is the well-known RFECV which is implemented by sci-kit learn. In general the feature selection algorithms perform the feature selection on principles such as between/within class-variance, observed and expected frequency, information gain and dependency between variables and feature importances. This ensures that different aspects of the dataset is taken into account when selecting the features and thus ensuring a more robust selection process. The second level consists of a homogeneous aggregated ensemble which computes the union and intersection of the output features from the three filter methods from the first layer. Furthermore, in the second layer there is a heterogeneous aggregated ensemble which accepts the output from the homogeneous aggregated
 layer, the wrapper methods (Forward Greedy Search) and the embedded method (RFECV). This layer also produces an union and intersection of the features found from the different layer and FS methods. The main idea behind using the intersection and union between the different feature selection methods is to combine the strengths of multiple techniques while reducing the risks of individual biases.
@@ -248,7 +260,9 @@ Hyperparemeter tuning is a highly iterative and time-consuming task. In this pro
 
 The following figure depicts the overall hyperparameter tuning process used in this project:
 
-<img src="./assets/Hyper_parameter_tuning.jpg" alt="Test Image" width="400"/>
+<p align="center">
+  <img src="./assets/Hyper_parameter_tuning.jpg" alt="Hyperparameter Tuning" width="400"/>
+</p>
 
 As seen on the figure, three different methods have been used, RandomSearchCV, GridSearchCV and Bayesian optimization. These hypertuning methods have very different purposes and as such different strengths and weaknesess. In this case the RandomSearch which is less time consuming than the brute-force method Gridsearch is actually used beforehand to gain some intuition about what parameters that might work. These findings is then used to scope out the parameter ranges for the Gridsearch algorithm which will exhaustively try out every combination in the parameter ranges. The second branch on the image is the bayesian optimization method. The general idea about adding this is to have a more sophisticated/intelligent methold that converges towards the most optimal solution by using previous iterations. In the end the results found from this branch will be compared to the first branch. Each of the 5 selected candidates models, selected from the preprocessing stage, will be hyperparameter-tuned by the process depicted on the figure above.
 
@@ -261,7 +275,9 @@ The Voting classifier is a more simpel alternative to the stacking classifier. I
 
 Now in order to document the development process for the Stacking and Voting classifier I will present a table of the results used in this project:
 
-<img src="./assets/Stacking_voting_classifiers.jpg" alt="Test Image" width="800"/>
+<p align="center">
+  <img src="./assets/Stacking_voting_classifiers.jpg" alt="Stacking and Voting Classifiers" width="800"/>
+</p>
 
 The main concept behind the Stacking classifier development can be seen on the figure above. We have a column representing model combinations and for here we iteratively try out base-learner combinations that gets increasingly more and more complex. Now we have a range of simple to fairly complex model combinations. This is done for three different meta-learners which are the RF, LGR and SVM-metalearners. The Voting classifier is a bit more simple and here we adjust weights that are assigned to each of the models in the voting-ensemble. 
 
@@ -270,7 +286,9 @@ The main concept behind the Stacking classifier development can be seen on the f
 ### Final Model evaluation
 During most of the Model development phase, we have used the F1-macro score since it captured all the demands for the algorithms and made it easier to automate the endless iterations in the preprocessing and tuning phases. However, to document the last and best performaing models, several other metrics is needed to provide a clearer image of the Ml-models peroformances. To highlight and explain the approach to this I will now present a table with the evaluation metrics used in this project:
 
-<img src="./assets/Final_model_evaluation_example.jpg" alt="Test Image" width="600"/>
+<p align="center">
+  <img src="./assets/Final_model_evaluation_example.jpg" alt="Final Model Evaluation" width="600"/>
+</p>
 
 Here we can see that the recall, precision, f1, ROC-AUC, PRC-AUC and accuracy metric has been used. An important thing to notice is that the Recall, Precision and F1 metric has individual scores calculated for both the negative and postive class. This gives better insight into the class wise performance. While using the macro score as a default makes it easier to consider the performance for both classes, it is still a bit cryptic to decipher. You can ask yourself this question: "Is my F1-macro score high because my model excels at the positive or negative class?". This question can't be answered without looking at class-wise performance. Furthermore, since the results are based on a 5-fold stratified cross validation, then it is also possible to calculate the standard deviation for each metric. This is very important for assessing whether the models are robust between each of the folds or if the performance varies greatly. This can give you some indication of whether these models would generalize well to unseen data. 
 
@@ -290,7 +308,9 @@ To acieve the above mentioned effects, the Shapley Additive Values (SHAP) is uti
 
 One of the methods used for global SHAP in this project is the **Beeswarm plot** which can be seen on the figure below:
 
-<img src="./assets/Beeswarm_plot.jpg" alt="Test Image" width="600"/>
+<p align="center">
+  <img src="./assets/Beeswarm_plot.jpg" alt="Beeswarm Plot" width="600"/>
+</p>
 
 This plot enables the user to the see the each feature (y-axis) and its corresponding feature values (color coded from red to blue) in relation to the SHAP values (x-axis). Each unique sample is displayed along the x-axis and if more samples have the same SHAP-value then they will vertically stack and the distribution can be seen as a cluster. Now it is possible to get an overview of whether high feature values of a certain feature correspond to a certain SHAP-value. If we use the MSC_t6 feature as an example we can see we have a red cluster on the left side of the vertical bar (representing 0 SHAP-value). We can now deduct that high feature values (red color) generally corresponds to a negative contribution in the classification process. In other words if this feature has high values it will push the prediction towards class 0 (negative class). This can also be used to look for outliers, e.g are there any samples with very low feature values (blue color), that is placed around the red cluster or just on the left hand side of the vertical bar? Also this figure shows that the MSC_t6 feature is the most contributing feature and the high feature values are decently seperated from the low feature values in relation to the SHAP-values.  
 
@@ -298,7 +318,9 @@ This plot enables the user to the see the each feature (y-axis) and its correspo
 
 Local Shap provides insight into a single prediction. The general usecase in which you would utilize this approach is when you want to check for misclassified samples from your algorithm. By analysing single predictions you can answer the questions like: "What happens when my algorithm produces false negatives and positives?". Also this can be used for single true positives and true negatives. If we use this concept in a more practical manner we are able to provide explanations on a feature level when we are using the algorithm to predict a certain sample. In this projects context we are able to give the clinician information about which features pushed the prediction towards the outcome for a single patient. Now it is possible to give a more detailed insight besides just the predictive outcome. One of the key methods that Shap provides are the plots called Forceplots and an example is provided below:
 
-<img src="./assets/Force_plot.jpg" alt="Test Image" width="800"/>
+<p align="center">
+  <img src="./assets/Force_plot.jpg" alt="Force Plot" width="800"/>
+</p>
 
 The plot that we see here is an example of a True Positive prediction made by this project algorithm for single prediction. In general Force plots depict the contribution from each of the features regarding the model’s prediction on a single sample, making it convenient for investigating which features are strongly associated with which classes. Practically, a force plot displays the given values for the features in that sample, and visually displays how big of a contribution they had towards either class 0 or class 1 in terms of probability. In this case we can see that the accumulated probability for the prediction is in total 96% (numerically 0.96). The decision threshold is 0.5 so its way above this threshold. By looking at the forceplot we can see that the MSC_t6 feature has the highest contribution towards this prediction which we also saw in the global plots. It is important to remember that the outcome of each features is dependent on the other features and there might be interactive effects. So if we have a misclassification we can look into the other features or the feature that might contradict itself can visually be seen. 
 
