@@ -225,7 +225,10 @@ To acieve the above mentioned effects, the Shapley Additive Values (SHAP) is uti
 
 **Global Shap**
 
+One of the methods used for global SHAP in this project is the beeswarm plot which can be seen on the figure below:
+<img src="./assets/Beeswarm_plot.jpg" alt="Test Image" width="600"/>
 
+This plot enables the user to the see the each feature (y-axis) and its corresponding feature values (color coded from red to blue) in relation to the SHAP values (x-axis). Each unique sample is displayed along the x-axis and if more samples have the same SHAP-value then they will vertically stack and the distribution can be seen as a cluster. Now it is possible to get an overview of whether high feature values of a certain feature correspond to a certain SHAP-value. If we use the MSC_t6 feature as an example we can see we have a red cluster on the left side of the vertical bar (representing 0 SHAP-value). We can now deduct that high feature values (red color) generally corresponds to a negative contribution in the classification process. In other words if this feature has high values it will push the prediction towards class 0 (negative class). This can also be used to look for outliers, e.g are there any samples with very low feature values (blue color), that is placed around the red cluster or just on the left hand side of the vertical bar? Also this figure shows that the MSC_t6 feature is the most contributing feature and the high feature values are decently seperated from the low feature values in relation to the SHAP-values.  
 
 
 
