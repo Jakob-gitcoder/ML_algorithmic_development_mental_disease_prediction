@@ -1,5 +1,26 @@
 # ML_algorithmic_development_mental_disease_prediction
 
+## Table of Contents
+1. [Project Overview](#About-this-project)
+   - [Project contributors and credits](#Project-contributors-and-credits)
+   - [Practical circumstances](#Practical-circumstances)
+   - [Background/problem](#Background/problem)
+   - [Project solution](#Project-solution)
+2. [How to run this project](#How-to-run-this-project)
+   - [Setting Up the Project](#Setting-Up-the-Project)
+   - [Running the Project](#Running-the-Project)
+3. [ML-development process](#ML-development-process)
+   - [Dataset information](#Dataset-information)
+   - [ML-models](#ML-models)
+   - [Evaluation strategy](#Evaluation-strategy)
+   - [Preprocesssing](#Preprocesssing)
+   - [Hyperparamterer tuning](#Hyperparamterer-tuning)
+   - [Construction of Stacking/Voting classifiers](#Construction-of-Stacking/Voting-classifiers)
+   - [Final Model evaluation](#Final-Model-evaluation)
+   - [XAI](#XAI)
+4. [Code implementation](#Code-implementation)
+
+
 ## About this project
 ### Type of project/purpose of repository
 This project is mainly a Data science project with the overall purpose of developing complex Machine-learning pipelines to iteratively improve classification performance for monitoring heart patient's mental state.
@@ -37,7 +58,7 @@ The general overview of the project solution can be seen on the figure below:
 The project flow is divided into three stages, Data preparation, Model development and Final model evaluation and XAI. For context, the model development phase is divided into two branches. The branches represent a parallel development of models on two different datasets. This is due to certain circumstances in relation to this specific project and the processes applied are identical for each branch. If you only have one dataset then just apply the steps highlighted for one branch. 
 
 
-## How to run this project / Requirements
+## How to run this project
 Important notice: Some of the processes in this project have been catered to a very specific instance of data variables and might not be best practise for data in other formats. Therefore, it is recommended to consider the general outline of the data variables that have been used and take the data-format into context and consideration when creating your own project.
 
 ### Setting Up the Project
