@@ -328,9 +328,17 @@ The plot that we see here is an example of a True Positive prediction made by th
 ---
 
 ## Code implementation
+### Important!
+The code for this project has been developed in jupyter notebooks and in the Python languauge. The contents provided in the notebooks reflect an iterative and incrementive approach to the overall model development process and is not entirely "plug and play". Since this repository mainly focuses on the theoretical approach the code files might not be entirely optimal for running directly on any users computer. However most of the redundant and repetive code segments have been removed but there might still be cases with repetition. This is to ensure that the thought process behind the work is not lost in its entirety. To fully understand the code one must be confortable in the python language and especially in Numpy, Pandas and Scikit-Learn. Some aspects of the code might also need to be tailored to your specific use case as the choice of methods and models used reflect the clinical problems and the structure of the medical data. 
+
+---
+
 ### Overview of development steps (codefiles)
-Explain the environment the code was build and executed in - Ucloud, computational ressources. 
-Explain what each file do in general and in order.
+The code from this project is run in a cloud environment called Ucloud, which is a service provided by Syddansk Universitet (SDU). Some of the processes are very heavy to run and it is adviced to use very good hardware or you might exspect to wait for days.
+
+To get further insight besides the general explanation of the codefiles in this Readme, see the folder "notebooks". The most important parces of the code is documented in detail inside the jupyter notebooks.
+
+The code files should be processed and interpreted in the following order (also included in the naming convention):
 
 1: pipeline preproccesing
 2: Scaling
@@ -339,4 +347,14 @@ Explain what each file do in general and in order.
 5: metrics_final_models
 6: shap
 
-Explain what the purpose of each file is. 
+---
+
+### Conclusion
+Summing up: This repository provides a comprehensive approach to the detection of anxiety and distress in ICD patients, integrating theoretical principles with practical implementation. Each segment aims to clarify the underlying concepts, model selection, and pipeline design to ensure transparency and reproducibility.
+
+Thank you for exploring this project! Your interest and time are greatly appreciated. If you have any questions, feedback, or suggestions, please feel free to reach out. I’m always happy to discuss and collaborate.
+
+Contact Information:
+📧 Email: jaeri2022@gmail.com
+
+
