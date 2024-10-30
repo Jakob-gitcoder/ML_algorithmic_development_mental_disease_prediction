@@ -1,7 +1,7 @@
 # ML_algorithmic_development_mental_disease_prediction
 
 ## Table of Contents
-1. [Project Overview](#About-this-project)
+1. [About this project](#About-this-project)
    - [Project contributors and credits](#Project-contributors-and-credits)
    - [Practical circumstances](#Practical-circumstances)
    - [Background/problem](#Background/problem)
