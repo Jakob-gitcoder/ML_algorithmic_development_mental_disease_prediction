@@ -2,14 +2,15 @@
 
 ## Table of Contents
 1. [About this project](#About-this-project)
+   - [Type of project/purpose of repository](#Type-of-project/purpose-of-repository)
    - [Project contributors and credits](#Project-contributors-and-credits)
    - [Practical circumstances](#Practical-circumstances)
    - [Background/problem](#Background/problem)
    - [Project solution](#Project-solution)
-2. [How to run this project](#How-to-run-this-project)
+3. [How to run this project](#How-to-run-this-project)
    - [Setting Up the Project](#Setting-Up-the-Project)
    - [Running the Project](#Running-the-Project)
-3. [ML-development process](#ML-development-process)
+4. [ML-development process](#ML-development-process)
    - [Dataset information](#Dataset-information)
    - [ML-models](#ML-models)
    - [Evaluation strategy](#Evaluation-strategy)
@@ -18,7 +19,7 @@
    - [Construction of Stacking/Voting classifiers](#Construction-of-Stacking/Voting-classifiers)
    - [Final Model evaluation](#Final-Model-evaluation)
    - [XAI](#XAI)
-4. [Code implementation](#Code-implementation)
+5. [Code implementation](#Code-implementation)
 
 ---
 
