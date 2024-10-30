@@ -215,15 +215,15 @@ Here we can see that the recall, precision, f1, ROC-AUC, PRC-AUC and accuracy me
 
 ### XAI 
 
-** Usecase of XAI **
+**Usecase of XAI**
 
 Explainable AI (XAI) is utilized in this project for the purpose of making the ML-algorithms decision process more tranparent in the decision making process. Furthermore, XAI can be utilized to get further insight into how the variables responds in certain conditions and for certain samples. This knowledge can be valuable in e.g clinical settings where special cases of patients can be encountered. Also it is possible to monitor the algorithms behavior for misclassified samples or even get a overview of the feature distributions on a global level.  
 
-** Shapley Additive Values **
+**Shapley Additive Values**
 
 To acieve the above mentioned effects, the Shapley Additive Values (SHAP) is utilized. The general idea behind SHAP builds upon cooperative game theory and it aims to capture the contributions of each feature in the desired model. For more information it is recommended to read more about the theory of Shap and cooperative game theory. 
 
-** Global Shap **
+**Global Shap**
 
 
 
