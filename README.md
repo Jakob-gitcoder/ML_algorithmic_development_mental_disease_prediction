@@ -338,14 +338,14 @@ The code from this project is run in a cloud environment called Ucloud, which is
 
 To get further insight besides the general explanation of the codefiles in this Readme, see the folder "notebooks". The most important parces of the code is documented in detail inside the jupyter notebooks.
 
-The code files should be processed and interpreted in the following order (also included in the naming convention):
+The code files should be processed and interpreted in the following order (also included in the naming convention for the code files):
 
-1: pipeline preproccesing
-2: Scaling
-3: all_tuned_models
-4: stacking_voting
-5: metrics_final_models
-6: shap
+1. pipeline preproccesing
+2. Scaling
+3. all_tuned_models
+4. stacking_voting
+5. metrics_final_models
+6. shap
 
 ---
 
